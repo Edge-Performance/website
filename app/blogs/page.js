@@ -42,9 +42,9 @@ Blog.propTypes = {
     blogPosts: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string.isRequired,
-            description: PropTypes.string.isRequired,
-            publishedDate: PropTypes.string.isRequired,
-            author: PropTypes.string.isRequired,
+            description: PropTypes.string,
+            publishedDate: PropTypes.string,
+            author: PropTypes.string,
             postImage: PropTypes.shape({
                 image: PropTypes.shape({
                     url: PropTypes.string.isRequired,
