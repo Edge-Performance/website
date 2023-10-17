@@ -24,12 +24,12 @@ export default function HeroSection({
             </div>
 
             <div className="absolute inset-0 overflow-hidden flex flex-col sm:flex-row  items-center justify-center w-full">
-                <div className="flex flex-col items-center justify-center gap-10 max-w-[84%] sm:max-w-[54%] mb-9 sm:mb-0">
+                <div className="flex flex-col items-center justify-center gap-10  max-w-[84%] sm:max-w-[54%] mb-9 sm:mb-0">
                     <div className="flex flex-col items-center justify-center gap-4 sm:gap-2">
-                        <h1 className="font-medium capitalize text-center text-[55px] sm:text-6xl text-white_A700 leading-[70px] sm:leading-[70px] tracking-[-5.5%] max-w-[304px] sm:max-w-auto">
+                        <h1 className="font-medium capitalize text-center text-[55px] sm:text-6xl text-white_A700 leading-[70px] sm:leading-[70px] tracking-[-5.5%] max-w-[304px] sm:max-w-full">
                             {title}
                         </h1>
-                        <h2 className="font-normal capitalize text-center text-4xl text-white_A700 leading-101 sm:leading-[70px] tracking-[-5.5%] max-w-[304px] sm:max-w-auto">
+                        <h2 className="font-normal capitalize text-center text-4xl text-white_A700 leading-101 sm:leading-[70px] tracking-[-5.5%] max-w-[304px] sm:max-w-full">
                             {subTitle}
                         </h2>
                     </div>

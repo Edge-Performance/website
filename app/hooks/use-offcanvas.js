@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function useOffcanvas() {
-    const [offcanvas, setOffcanvas] = useState(false);
+    const [offcanvas, setOffcanvas] = useState(null);
 
     const offcanvasHandler = () => {
         setOffcanvas((prev) => !prev);
