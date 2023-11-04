@@ -20,7 +20,8 @@ export default function HeroSection({
                     alt={imgAlt}
                     priority
                 />
-                <div className="absolute top:10 left:10 sm:top-0 sm:left-0 h-full w-full bg-indigo_900_ed opacity-75"></div>
+                <div className="absolute top:10 left:10 sm:top-0 sm:left-0 h-full w-full bg-black opacity-70"></div>
+                
             </div>
 
             <div className="absolute inset-0 overflow-hidden flex flex-col sm:flex-row  items-center justify-center w-full">

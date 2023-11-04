@@ -4,6 +4,7 @@ import HeroSection from "../components/hero-section/layout-2";
 import AmFocus from "../components/features/am-focus";
 import PmFocus from "../components/features/pm-focus";
 import Empowerment from "../components/features/empowerment";
+import ContactSection from "../components/leadership/contact-section";
 
 import { fetchGraphQL } from "../utils";
 import { FeaturesQuery } from "../queries";
@@ -29,6 +30,7 @@ export default async function Features() {
             <PmFocus {...data.data.featuresSection2.items[0]} />
             <Empowerment {...data.data.featuresSection3.items[0]} />
             <DownloadFeaturesSection />
+            <ContactSection />
         </main>
     );
 }

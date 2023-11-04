@@ -55,28 +55,6 @@ const HamburgerMenu = () => {
                       </Link>
                   </button>
                 </div>
-                <div className="flex items-center justify-start gap-2">
-                  <Image
-                      src="/images/country.svg"
-                      height={22}
-                      width={22}
-                      className="h-[22px] w-[22px]"
-                      alt="computer"
-                  />
-                  <div className="flex flex-row gap-0.5 items-center justify-start self-stretch w-auto">
-                      <p
-                          className={`font-normal not-italic text-left text-sm text-white w-auto`}
-                      >
-                          En
-                      </p>
-                      <Image
-                          src="/icons/arrow-down.svg"
-                          height={4}
-                          width={7}
-                          alt="vector"
-                      />
-                  </div>
-                  </div>
               </div>
             </div>
             <div className="absolute top-0 right-0 mr-8 mt-8" onClick={offcanvasHandler}>

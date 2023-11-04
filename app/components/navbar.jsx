@@ -4,7 +4,6 @@ import MenuHeader from "./menu-header";
 import { fetchGraphQL } from "../utils";
 import HamburgerMenu from "./hamburger-menu";
 
-
 export default async function Navbar() {
     const query = `
     query {
@@ -56,31 +55,9 @@ export default async function Navbar() {
                     </div>
 
                     <div className="hidden sm:flex sm:items-center sm:justify-center sm:gap-6">
-                        <div className="flex items-center justify-start gap-2">
-                            <Image
-                                src="/images/country.svg"
-                                height={22}
-                                width={22}
-                                className="h-[22px] w-[22px]"
-                                alt="computer"
-                            />
-                            <div className="flex flex-row gap-0.5 items-center justify-start self-stretch w-auto">
-                                <p
-                                    className={`font-normal not-italic text-left text-sm text-white w-auto`}
-                                >
-                                    En
-                                </p>
-                                <Image
-                                    src="/icons/arrow-down.svg"
-                                    height={4}
-                                    width={7}
-                                    alt="vector"
-                                />
-                            </div>
-                        </div>
                         <div className="flex items-center justify-center gap-3">
                             <Button
-                                url={data.data.header.contactButton.url}
+                                url={"#contact"}
                                 textColor={"white"}
                                 className={
                                     "bg-indigo_900_ed border border-white h-5"

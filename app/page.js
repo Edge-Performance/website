@@ -4,10 +4,10 @@ import { fetchGraphQL } from "./utils";
 import { HomeQuery } from "./queries";
 
 import BlogList from "./components/blog/blog-list";
-import Partners from "./components/partners";
 import HeroSection from "./components/hero-section/layout-1";
 import Benefits from "./components/benefits";
 import Features from "./components/features";
+import ContactSection from "./components/leadership/contact-section";
 
 const PricingSection = dynamic(() => import("./components/pricing"), {
     ssr: false,
@@ -21,8 +21,6 @@ export const metadata = {
 async function fetchBlogData() {
     const data = await fetchGraphQL(HomeQuery);
     const heroSectionData = data.data.heroSectionCollection.items[0];
-    const partnersSectionData =
-        data.data.partnersHomePageSectionCollection.items[0];
     const benefitsSectionData =
         data.data.benefitsHomeSectionCollection.items[0];
     const featuresSectionData = data.data.keyFeaturesSectionCollection.items[0];
@@ -31,7 +29,6 @@ async function fetchBlogData() {
 
     return {
         heroSectionData,
-        partnersSectionData,
         benefitsSectionData,
         featuresSectionData,
         pricingSectionData,
@@ -42,7 +39,6 @@ async function fetchBlogData() {
 export default async function Home() {
     const {
         heroSectionData,
-        partnersSectionData,
         benefitsSectionData,
         featuresSectionData,
         pricingSectionData,
@@ -59,19 +55,20 @@ export default async function Home() {
                 ctaUrl={heroSectionData.ctaButton.url}
                 subTitle={heroSectionData.subTitle}
             />
-            <Partners
-                sectionTitle={partnersSectionData.title}
-                partnersLogo={partnersSectionData.partnerLogoCollection.items}
+
+            <Features
+                sectionTitle={featuresSectionData.title}
+                description={featuresSectionData.description}
+                features={featuresSectionData.featuresCollection.items}
             />
             <Benefits
                 sectionTitle={benefitsSectionData.title}
                 description={benefitsSectionData.description}
                 benefits={benefitsSectionData.benefitsCollection.items}
             />
-            <Features
-                sectionTitle={featuresSectionData.title}
-                description={featuresSectionData.description}
-                features={featuresSectionData.featuresCollection.items}
+            <BlogList
+                sectionTitle={blogSectionData.sectionTitle}
+                blogPosts={blogSectionData.blogPostsCollection.items}
             />
             <PricingSection
                 sectionTitle={pricingSectionData.title}
@@ -79,10 +76,7 @@ export default async function Home() {
                 personalUse={pricingSectionData.personalUse}
                 teamUse={pricingSectionData.teamUse}
             />
-            <BlogList
-                sectionTitle={blogSectionData.sectionTitle}
-                blogPosts={blogSectionData.blogPostsCollection.items}
-            />
+            <ContactSection />
         </main>
     );
 }

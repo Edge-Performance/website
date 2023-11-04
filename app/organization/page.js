@@ -2,6 +2,7 @@ import HeroSection from "../components/hero-section/layout-2";
 import IntroSection from "../components/organization";
 import CoachEdge from "../components/organization/coach-edge";
 import Download from "../components/organization/download";
+import ContactSection from "../components/leadership/contact-section";
 import { fetchGraphQL } from "../utils";
 import { OrganizationQuery } from "../queries";
 
@@ -18,6 +19,7 @@ export default async function Organization() {
             <IntroSection {...data.data.organizationSection1.items[0]} />
             <CoachEdge />
             <Download />
+            <ContactSection />
         </main>
     );
 }
