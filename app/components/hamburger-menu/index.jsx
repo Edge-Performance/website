@@ -1,7 +1,6 @@
 'use client'
 import PropTypes from "prop-types";
 import Link from "next/link";
-import Image from "next/image";
 import useOffcanvas from "@/app/hooks/use-offcanvas";
 import CloseIcon from "../ui/icons/close";
 import HamburgerIcon from "../ui/icons/hamburger";
@@ -38,7 +37,7 @@ const HamburgerMenu = () => {
                     className={`bg-indigo_900 capitalize border border-solid border-white text-white h-[34px] w-[105px] font-normal not-italic  px-[30px] py-2 rounded-[77px] text-[14px] leading-[18.2px] flex items-center justify-center`}
                     >
                       <Link
-                          href={"/contact"}
+                          href={"#contact"}
                           className={`font-normal text-sm text- no-underline hover:text-bg-amber_A400`}
                       >
                           contact
@@ -48,7 +47,7 @@ const HamburgerMenu = () => {
                         className={`bg-amber_A400 capitalize text-black h-[34px] w-[127px] font-normal not-italic  px-[30px] py-2 rounded-[77px] text-[14px] leading-[18.2px] flex items-center justify-center`}
                     >
                       <Link
-                          href={"/contact"}
+                          href={"#contact"}
                           className={`font-normal text-sm text- no-underline hover:text-bg-amber_A400`}
                       >
                           get started

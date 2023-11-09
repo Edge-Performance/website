@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from 'next/navigation'
 
 export default function MenuHeader({ navLinks }) {
+    const router = useRouter()
     const pathname = usePathname();
     return (
         <nav className="hidden sm:flex sm:items-center sm:justify-center">
@@ -12,18 +13,18 @@ export default function MenuHeader({ navLinks }) {
                     <li
                         className="flex flex-col items-center justify-center w-full gap-1"
                         key={index}
+                        onClick={() => router.push(navItem.url)}
                     >
                         {pathname && (
-                            <Link
-                                href={navItem.url}
+                            <span
                                 className={`${
                                     pathname == navItem.url
                                         ? "font-bold"
                                         : "font-normal"
-                                } text-white/90 no-underline hover:text-white`}
+                                    } text-white/90 no-underline hover:text-white`}
                             >
                                 {navItem.text}
-                            </Link>
+                            </span>
                         )}
                         {pathname == navItem.url && (
                             <hr className="border-t-4 rounded-full border-white w-1/3" />
