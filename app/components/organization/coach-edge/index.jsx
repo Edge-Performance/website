@@ -40,13 +40,9 @@ export default function CoachEdge() {
                             athletes. The ability to add to your current
                             metrics’ regular data about an athlete's trends and
                             mental routine brings a whole new dynamic to
-                            performance. Imagine understanding how your
-                            athlete’s focus is impacted by training breathwork
-                            the night before a game. That could be the
-                            difference between good and great, helping create a
-                            culture where athletes are encouraged to re-commit
-                            daily, feeling more prepared, informed and
-                            supported.
+                            performance that could be the difference between
+                            good and great, helping athletes to re-commit
+                            daily, feeling more prepared, informed and supported.
                         </p>
                     </div>
                 </div>
