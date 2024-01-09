@@ -47,7 +47,7 @@ const HamburgerMenu = () => {
                         className={`bg-amber_A400 capitalize text-black h-[34px] w-[127px] font-normal not-italic  px-[30px] py-2 rounded-[77px] text-[14px] leading-[18.2px] flex items-center justify-center`}
                     >
                       <Link
-                          href={"#contact"}
+                          href={"https://apps.apple.com/us/app/edge-performance/id1501787471"}
                           className={`font-normal text-sm text- no-underline hover:text-bg-amber_A400`}
                       >
                           get started
