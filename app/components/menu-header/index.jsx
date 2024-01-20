@@ -11,7 +11,7 @@ export default function MenuHeader({ navLinks }) {
             <ul className="flex items-center justify-center gap-8">
                 {navLinks.map((navItem, index) => (
                     <li
-                        className="flex flex-col items-center justify-center w-full gap-1"
+                        className="flex flex-col items-center justify-center w-full gap-1 cursor-pointer"
                         key={index}
                         onClick={() => router.push(navItem.url)}
                     >
