@@ -9,17 +9,17 @@ export default function BlogPostDetail({ blogDetail }) {
                         {blogDetail.blogTitle}
                     </h1>
                     <p className="font-normal leading-6 sm:tracking-[-5.5%] md:max-w-full max-w-screen-sm not-italic text-lg text-gray_600 text-left">
-                        {blogDetail.description}
+                        {blogDetail?.description}
                     </p>
                 </div>
                 <div className="w-full">
-                    <Image
-                        src={blogDetail.mainBlogImage.url}
+                    {blogDetail?.mainBlogImage?.url && (<Image
+                        src={blogDetail?.mainBlogImage?.url}
                         className="object-cover rounded-3xl w-full"
                         width={420}
                         height={272}
                         alt={""}
-                    />
+                    />)}
                 </div>
                 <p className="font-normal leading-[30px] tracking-[-5.5%] md:max-w-full max-w-screen-sm not-italic text-xl text-gray_600 text-left">
                     {blogDetail.paragraph1.json.content[0].content[0].value}
@@ -55,38 +55,39 @@ export default function BlogPostDetail({ blogDetail }) {
 
                         <div className="flex flex-col justify-start items-start gap-6 w-full">
                             <span className="font-bold leading-[30px] tracking-[-5.5%] text-3xl text-gray_900_02 text-left">
-                                {blogDetail.image1Title}
+                                {blogDetail?.image1Title}
                             </span>
                             <p className="font-normal leading-[30px] tracking-[-5.5%] md:max-w-full max-w-screen-sm not-italic text-xl text-gray_600 text-left">
-                                {blogDetail.imagesDescription[0]}
+                                {blogDetail?.imagesDescription && blogDetail?.imagesDescription[0]}
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-4 sm:gap-8 w-full">
                         <div className="w-full rounded-3xl">
+                            {blogDetail?.blogPostImagesCollection?.items[1]?.url && (
                             <Image
                                 src={
-                                    blogDetail.blogPostImagesCollection.items[1]
-                                        .url
+                                    blogDetail?.blogPostImagesCollection?.items[1]
+                                        ?.url
                                 }
                                 className="object-cover rounded-[16px] w-full"
                                 width={420}
                                 height={272}
                                 alt={""}
-                            />
+                            />)}
                         </div>
                         <div className="flex flex-col justify-start items-start gap-2 sm:gap-6 w-full">
                             <span className="font-bold leading-[30px] tracking-[-5.5%] text-3xl text-gray_900_02 text-left">
-                                {blogDetail.image1Title}
+                                {blogDetail?.image1Title}
                             </span>
                             <p className="font-normal leading-[30px] tracking-[-5.5%] md:max-w-full max-w-screen-sm not-italic text-xl text-gray_600 text-left">
-                                {blogDetail.imagesDescription[1]}
+                                { blogDetail?.imagesDescription &&  blogDetail?.imagesDescription[1]}
                             </p>
                         </div>
                     </div>
                 </div>
                 <p className="font-normal leading-[30px] tracking-[-5.5%] md:max-w-full max-w-screen-sm not-italic text-xl text-gray_600 text-left">
-                    {blogDetail.paragraph3.json.content[0].content[0].value}
+                    {blogDetail?.paragraph3?.json?.content[0]?.content[0]?.value}
                 </p>
             </div>
         </section>

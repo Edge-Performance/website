@@ -16,6 +16,7 @@ export default async function BlogDetail({ params }) {
             <BlogPostDetail blogDetail={data.data.blogDetail} />
             <RelatedPosts
                 relatedPosts={data.data.blogDetail.relatedPostsCollection}
+                sectionTitle={"Related Posts"}
             />
         </main>
     );

@@ -359,36 +359,36 @@ const FeaturesQuery = `
     }
     `;
 const BlogsQuery = `
-    query {
-      latestPostsSectionCollection{
-        items{
-          title
-          description
-          blogPostsCollection{
-            items{
-              title
-              slug
-              description
-              publishedDate
-              blogDetail {
-                sys{
-                  id
-                }
-              }
-              author
-              postImage{
-                image{
-                  url
-                  width
-                  height
-                }
-                imageAlt
-              }
-            }
-          }
+query {
+  latestPostsSectionCollection{
+    items{
+      title
+      description
+    }
+  }	
+  postCardCollection{
+    items{
+      title
+      slug
+      description
+      publishedDate
+      author
+      blogDetail{
+        sys{
+          id
         }
       }
+     postImage{
+        image{
+          url
+          width
+          height
+        }
+        imageAlt
+     }
     }
+  }
+}
   `;
 
 const blogPostDetailQuery = `

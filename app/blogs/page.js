@@ -4,10 +4,10 @@ import { BlogsQuery } from "../queries";
 import InfiniteScrollGrid from "../components/infinite-scroll-grid";
 async function fetchBlogData() {
     const data = await fetchGraphQL(BlogsQuery);
-    const blogData = data.data.latestPostsSectionCollection.items[0];
-    const title = blogData.title;
-    const description = blogData.description;
-    const blogPosts = blogData.blogPostsCollection.items;
+    const latestPosts = data?.data?.latestPostsSectionCollection?.items[0];
+    const title = latestPosts?.title;
+    const description = latestPosts?.description;
+    const blogPosts = data?.data?.postCardCollection?.items;
 
     return { title, description, blogPosts };
 }
@@ -19,6 +19,7 @@ export const metadata = {
 
 export default async function Blog() {
     const { title, description, blogPosts } = await fetchBlogData();
+    console.log(blogPosts?.length)
     return (
         <main className="flex bg-white justify-center items-center w-full">
             <section className="flex flex-col justify-center items-center w-full gap-16 my-20 mx-8 2xl:mx-72">
@@ -30,7 +31,7 @@ export default async function Blog() {
                         {description}
                     </p>
                 </div>
-                <InfiniteScrollGrid posts={blogPosts} />
+                {blogPosts && (<InfiniteScrollGrid posts={blogPosts} />)}
             </section>
         </main>
     );

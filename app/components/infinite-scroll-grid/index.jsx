@@ -21,13 +21,13 @@ export default function InfiniteScrollGrid({posts}) {
       setItems(posts.slice(0, 2));
       (posts.length <= 2) ? setHasMore(false) : setHasMore(true)  
     }
-  }, [posts]);
+  }, [posts, screenWidth]);
 
   const fetchData = useCallback(() => {
     if (screenWidth > 700) setItems(items.concat(posts.slice(items.length, items.length + 4)));
     else setItems(items.concat(posts.slice(items.length, items.length + 2)));
     return;
-  }, [items, posts]);
+  }, [items, posts, screenWidth]);
   return (
     <InfiniteScroll
         dataLength={items.length}
