@@ -35,7 +35,7 @@ export default function RelatedPosts({ relatedPosts,sectionTitle="Latest Posts" 
                                         {blogPost?.title}
                                     </span>
                                 </div>
-                                <p className="font-normal leading-[28.00px] md:max-w-full max-w-screen-sm not-italic text-base text-gray_600 text-left">
+                                <p className="font-normal leading-[28px] md:max-w-full max-w-screen-sm not-italic text-base text-gray_600 text-left">
                                     {blogPost?.description}
                                 </p>
                             </div>
